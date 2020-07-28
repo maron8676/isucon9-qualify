@@ -5,6 +5,14 @@
     path=/home/isucon/isucari
     state=directory
 
+- name: download upload image
+  shell: |
+    cd /root/isucon9-qualify/webapp/public
+    wget https://github.com/isucon/isucon9-qualify/releases/download/v2/initial.zip
+    unzip -o initial.zip
+    rm initial.zip
+    mv v3_initial_data upload
+
 - name: Deploy isucari
   become: yes
   synchronize:

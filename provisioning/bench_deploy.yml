@@ -1,4 +1,4 @@
-- hosts: bench
+- hosts: localhost
   user: root
   gather_facts: yes
 
@@ -7,9 +7,10 @@
 
     - kernel-tune
     - nginx.log-format
-    - external.nginx
     - external.benchmarker
     - external.benchmark-worker
+    - external.shipment
+    - external.payment
 
   tasks:
     - name: Start default daemons

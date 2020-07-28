@@ -1,0 +1,4 @@
+- name: create initial data
+  shell: |
+    cd /root/isucon9-qualify/initial-data
+    make

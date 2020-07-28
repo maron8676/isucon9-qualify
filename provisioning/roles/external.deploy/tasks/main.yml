@@ -5,6 +5,14 @@
     path=/home/isucon/isucari
     state=directory
 
+- name: download bench image
+  shell: |
+    cd /root/isucon9-qualify/initial-data
+    wget https://github.com/isucon/isucon9-qualify/releases/download/v2/bench1.zip
+    unzip -o bench1.zip
+    rm bench1.zip
+    mv v3_bench1 images
+
 - name: Deploy isucari
   become: yes
   synchronize:

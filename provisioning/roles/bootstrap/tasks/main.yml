@@ -24,6 +24,7 @@
     'libpng-dev',
     'libtidy-dev',
     'libffi-dev',
+    'unzip',
     ]
     state: present
     update_cache: yes
